@@ -74,7 +74,6 @@ def index():
 MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
 ageList = ['(0-2)', '(4-6)', '(8-12)', '(15-20)', '(21-24)', '(25-32)', '(38-43)', '(48-53)', '(60-100)']
 genderList = ['Male', 'Female']
-=======
 @app.route('/upload', methods=['POST'])
 def upload():
     try:
@@ -87,7 +86,6 @@ def upload():
             os.makedirs("temp", exist_ok=True)
             with open(filepath, "wb") as f:
                 f.write(image_bytes)
->>>>>>> 58c08ccfb77da5d0485df13d0b9c8330158f0707
 
         # For file upload
         elif 'file' in request.files:
